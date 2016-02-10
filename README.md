@@ -30,4 +30,19 @@ La infraestructura que he utilizado en este proyecto me ha proporcionado varias 
 La herramienta de construcción que usa Django es manage.py, el cual permite ejecutar la aplicación así como realizar varias operaciones de control.
 
 
+# Requerimientos
 
+Instalación de dependencias (usa el archivo requirements.txt) : 
+```
+sudo pip install -r requirements.txt
+```
+
+Para ejecutar la apliación:
+```
+python manage.py runserver
+```
+
+Puerto por defecto: 8000
+
+Nota: se puede asignar otro puerto cualquiera que esté libre.
+Ej-> Puerto 80: ``` sudo pytho manage.py runserver 0.0.0.0:80```
