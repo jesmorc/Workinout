@@ -17,4 +17,17 @@ Par la aplicación web necesitamos un soporte que ofrezca una infraestructura qu
 La infraestructura que he utilizado en este proyecto me ha proporcionado varias opciones, como las máquinas virtuales que me proporciona la IaaS Azure.
 
 
+## Herramientas
+
+- Desarrollada en Django. (framework de Python)
+- BBDD SQLite3.
+- Bootstrap para el estilo de la app web.
+- Travis para integración contínua.
+- PaaS: Heroku
+- IaaS: Azure
+- Despliegue automático: Fabric
+
+La herramienta de construcción que usa Django es manage.py, el cual permite ejecutar la aplicación así como realizar varias operaciones de control.
+
+
 
