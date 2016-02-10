@@ -32,7 +32,7 @@ La herramienta de construcción que usa Django es manage.py, el cual permite eje
 
 # Requerimientos
 
-Instalación de dependencias (usa el archivo requirements.txt) : 
+Instalación de dependencias (usa el archivo [requirements.txt](https://github.com/jesmorc/Workinout/blob/master/requirements.txt)) : 
 ```
 sudo pip install -r requirements.txt
 ```
