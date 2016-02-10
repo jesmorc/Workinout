@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Inicio
+{% endblock %}
+
+{% block ListaGyms %}
+
+	{% if gyms %}
+		{% for gym in gyms %}
+			<li><a href="/Workinout/gym/{{ gym.slug }}"> {{ gym.nombre }}</a></li>
+		{% endfor %}
+	{% else %}
+		<strong>No hay gyms.</strong>
+	{% endif %}
+
+{% endblock %}
+
+{% block Cuerpo %}
+	<h1 class="page-header">Página principal Workinout</h1>
+
+	<div class="row placeholders">
+        <img src="/static/Workinout/images/background.jpg" alt="Workinout" />        
+
+{% endblock %}
+        
+        
+        

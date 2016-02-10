@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Actividades{% endblock %}
+
+
+
+
+{% block Cuerpo %}
+<div class="hero-unit">
+    <h1>esta en el gym TAL</h1>
+    {% if tapas %}
+        {% for actividad in actividades %}
+            <p>{{actividad.titulo}}</p>
+        {% endfor %}
+    {% else %}
+        <strong>No hay actividades.</strong>
+    {% endif %}    
+    <div class="container">
+        
+
+
+    </div>
+    <!-- /container -->
+
+</div>
+
+
+{% endblock %}

@@ -45,4 +45,23 @@ python manage.py runserver
 Puerto por defecto: 8000
 
 Nota: se puede asignar otro puerto cualquiera que esté libre.
-Ej-> Puerto 80: ``` sudo pytho manage.py runserver 0.0.0.0:80```
+Ej-> Puerto 80: ``` sudo python manage.py runserver 0.0.0.0:80```
+
+# Instalación local
+
+Nos clonamos el repositorio con:
+```
+git clone https://github.com/jesmorc/Workinout.git
+```
+
+Una vez dentro de la carpeta, en caso de que no estuviera la BBDD creada se crearía y se llenaría de datos con estos dos comandos de la imagen:
+
+![createBBDD](http://i.imgur.com/dyaSP72.png)
+
+Ejecutamos la aplicación con el comando visto antes:
+```
+python manage.py runserver
+```
+
+Y entramos al navegador a la dirección http://127.0.0.1:8000/Workinout/
+

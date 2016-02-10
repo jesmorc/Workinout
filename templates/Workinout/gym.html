@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %} 
+    {% if gym %}
+        {{ gym.nombre }} 
+    {% else %}
+        nada
+    {% endif %}
+{% endblock %}
+
+{% block ListaGyms %}
+
+	{% if gyms %}
+		{% for gym in gyms %}
+			<li><a href="/Workinout/gym/{{ gym.slug }}"> {{ gym.nombre }}</a></li>
+		{% endfor %}
+	{% else %}
+		<strong>No hay gyms.</strong>
+	{% endif %}
+
+{% endblock %}
+
+{% block Cuerpo %}
+	<h1 class="page-header">{{ gym.nombre }}</h1>
+
+	<div class="row placeholders">
+		<div class="col-xs-6 col-sm-3 placeholder">
+            <img src="/static/Workinout/logos/building.jpg" class="img-responsive" alt="Generic placeholder thumbnail" height="200" width="200">
+
+            <h4>{{ gym.nombre }}</h4>
+            <span class="text-muted">{{gym.lema}}</span>
+            <br/>
+            <span class="text-muted">Visitas: {{gym.visitas}}</span>
+		</div>
+		<p>
+		{{ gym.descripcion }}
+		</p>
+	
+        <p>BOXEO: <strong>{{gym.precio_boxeo}}</strong></p>
+        <p>KARATE:  <strong>{{gym.precio_karate}}</strong></p>
+        <p>JUDO:  <strong>{{gym.precio_judo}}</strong></p>
+        
+        
+        
+        {% load easy_maps_tags %}
+        {#% easy_map "Russia, Ekaterinburg, Mira 32" 300 400 %#}
+
+</div>
+	<h3 class="sub-header">Lista de actividades</h3>
+	<div class="table-responsive">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Descripción</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% if actividades %}
+    				{% for actividad in actividades %}
+        				<tr>
+            				<td>{{actividad.titulo}}</td>
+            				<td>{{actividad.descripcion}}</td>
+                            <td><button class="btn btn-default btn-xs" onclick="meGustalaActividad('{{actividad.titulo}}','{{gym.slug}}')"> MeGusta ({{actividad.megustas}})</button></td>
+        				</tr>
+    				{% endfor %}
+			    {% else %}
+			        <strong>No hay actividades que mostrar.</strong>
+			    {% endif %}
+			</tbody>
+		</table>
+	</div>
+{% endblock %}
+
+{% block misScripts %}
+    <script>
+        function meGustalaactividad(titulo, gym){
+            $.ajax({
+                url: '/Workinout/megusta_actividad/',
+                type: 'get',
+                data: {'titulo': titulo, 'gym':gym},
+                success: function(data) {
+                    location.reload(true);
+                },
+                failure: function(data) { 
+                    alert('esto no fufa');
+                }
+            }); 
+        }
+    </script>
+{% endblock %}
