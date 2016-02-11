@@ -4,7 +4,7 @@ Portal de gimnasios y actividades deportivas dentro de los mismos.
 
 Jesús García Godoy
 
-## Introducción
+# Introducción
 
 El fin del proyecto no es la aplicación en sí, si no la creación de una infraestructura donde alojar y desplegar dicha aplicación. La aplicacición consiste en un portal de gimnasios, el cual detalla las actividades de cada uno de ellos, así como de los precios medios y calificaciones de cada unas de éstas.
 Se permite el registro de usuarios. Algunas secciones sñolo están disponibles si el usuario está registrado.
@@ -17,7 +17,7 @@ Par la aplicación web necesitamos un soporte que ofrezca una infraestructura qu
 La infraestructura que he utilizado en este proyecto me ha proporcionado varias opciones, como las máquinas virtuales que me proporciona la IaaS Azure.
 
 
-## Herramientas
+# Herramientas
 
 - Desarrollada en Django. (framework de Python)
 - BBDD SQLite3.
@@ -47,7 +47,7 @@ Puerto por defecto: 8000
 Nota: se puede asignar otro puerto cualquiera que esté libre.
 Ej-> Puerto 80: ``` sudo python manage.py runserver 0.0.0.0:80```
 
-# Instalación local
+## Instalación local
 
 Nos clonamos el repositorio con:
 ```
@@ -66,7 +66,7 @@ python manage.py runserver
 Y entramos al navegador a la dirección http://127.0.0.1:8000/Workinout/
 
 
-# Desarrollo basado en pruebas
+## Desarrollo basado en pruebas
 
 Para el testeo,  Django dispone de *unittest*, utilizando un archivo [tests.py](https://github.com/jesmorc/Workinout/blob/master/Workinout/tests.py), que contiene los tests que queramos hacerle a la aplicación.
 
@@ -77,5 +77,14 @@ python manage.py test
 
 ![tests](http://i.imgur.com/bmclf7V.png)
 
+
+# Integración continua
+
+Para la automatización del proceso de pruebas y para desarrollar el proyecto bajo el concepto de integración continua, he usado **Travis-CI**. 
+La configuración para Travis-CI se indica en el fichero .travis.yml.
+
+Para ver la documentación completa de esta sección:
+
+[Integración Continua]().
 
 
