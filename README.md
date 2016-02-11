@@ -2,6 +2,8 @@
 
 ![build_travis](https://api.travis-ci.org/jesmorc/Workinout.svg)
 
+[![Heroku](https://www.herokucdn.com/deploy/button.png)](https://workinout.herokuapp.com/Workinout/)
+
 Portal de gimnasios y actividades deportivas dentro de los mismos.
 
 Jesús García Godoy
@@ -89,4 +91,10 @@ Para ver la documentación completa de esta sección:
 
 [Integración Continua](https://github.com/jesmorc/Workinout/blob/master/documentacion/Integracion_continua.md).
 
+
+# Despliegue en Heroku
+
+Para ver la documentación completa de esta sección:
+
+[Despliegue Heroku](https://github.com/jesmorc/Workinout/blob/master/documentacion/Despliegue_Heroku.md).
 
