@@ -65,3 +65,17 @@ python manage.py runserver
 
 Y entramos al navegador a la dirección http://127.0.0.1:8000/Workinout/
 
+
+# Desarrollo basado en pruebas
+
+Para el testeo,  Django dispone de *unittest*, utilizando un archivo [tests.py](https://github.com/jesmorc/Workinout/blob/master/Workinout/tests.py), que contiene los tests que queramos hacerle a la aplicación.
+
+Los tests se ejecutan con: 
+```
+python manage.py test
+```
+
+![tests](http://i.imgur.com/bmclf7V.png)
+
+
+
