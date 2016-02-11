@@ -1,5 +1,7 @@
 # Workinout
 
+![build_travis](https://api.travis-ci.org/jesmorc/Workinout.svg)
+
 Portal de gimnasios y actividades deportivas dentro de los mismos.
 
 Jesús García Godoy
