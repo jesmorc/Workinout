@@ -85,6 +85,6 @@ La configuración para Travis-CI se indica en el fichero .travis.yml.
 
 Para ver la documentación completa de esta sección:
 
-[Integración Continua]().
+[Integración Continua](https://github.com/jesmorc/Workinout/blob/master/documentacion/Integracion_continua.md).
 
 
