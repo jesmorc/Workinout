@@ -8,4 +8,5 @@ install:
 test:
 	python manage.py test
 	
-
+run:
+	gunicorn proyectoP4.wsgi:application -b 0.0.0.0:80
