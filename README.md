@@ -111,3 +111,9 @@ Para ver la documentación completa de esta sección:
 
 [Despliegue Azure](https://github.com/jesmorc/Workinout/blob/master/documentacion/Despliegue_Azure.md).
 
+
+# Despliegue automático
+
+Al estar el proyecto hecho en Django, la herramienta usada para desplegar la aplicación automáticamente y remotamente es **Fabric**.
+
+[Despliegue Fabric](https://github.com/jesmorc/Workinout/blob/master/documentacion/Despliegue_Fabric.md).
