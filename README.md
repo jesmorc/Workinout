@@ -4,6 +4,8 @@
 
 [![Heroku](https://www.herokucdn.com/deploy/button.png)](https://workinout.herokuapp.com/Workinout/)
 
+[![Azure](http://azuredeploy.net/deploybutton.png)](http://iv-jesmorc-ubuntuserver-service-euemq.cloudapp.net/Workinout/)
+
 Portal de gimnasios y actividades deportivas dentro de los mismos.
 
 Jesús García Godoy
