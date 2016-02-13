@@ -10,3 +10,13 @@ test:
 	
 run:
 	gunicorn proyectoP4.wsgi:application -b 0.0.0.0:80
+
+crearMaquina:
+	cd Workinout && sudo vagrant up --provider=azure
+
+provisionarMaquina:
+	cd Workinout && vagrant provision
+
+azure:
+	sudo vagrant provision
+	fab -H vagrant@iv-jesmorc-ubuntuserver-service-euemq.cloudapp.net runApp
