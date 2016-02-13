@@ -92,9 +92,20 @@ Para ver la documentación completa de esta sección:
 [Integración Continua](https://github.com/jesmorc/Workinout/blob/master/documentacion/Integracion_continua.md).
 
 
-# Despliegue en Heroku
+# Despliegue en PaaS
+
+El PaaS (Platform as a Service) elegido ha sido **Heroku**.
 
 Para ver la documentación completa de esta sección:
 
 [Despliegue Heroku](https://github.com/jesmorc/Workinout/blob/master/documentacion/Despliegue_Heroku.md).
+
+
+# Despliegue en IaaS
+
+El IaaS (Infrastructure as a Service) elegido ha sido **Azure**.
+
+Para ver la documentación completa de esta sección:
+
+[Despliegue Azure](https://github.com/jesmorc/Workinout/blob/master/documentacion/Despliegue_Azure.md).
 

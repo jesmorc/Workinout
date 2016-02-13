@@ -1,0 +1,39 @@
+---
+- hosts: localhost
+  sudo: yes
+  remote_user: vagrant
+  tasks:
+  - name: Actualizar el sistema
+    #apt: update_cache=yes upgrade=dist
+    command: sudo apt-get update
+    register: actualizarSistema
+  - debug: msg="{{ actualizarSistema.stdout }}"
+  - debug: msg="{{ actualizarSistema.stderr }}"
+  - name: Instalar paquetes necesarios
+    apt: name=python-setuptools state=present
+    apt: name=python-dev state=present
+    apt: name=build-essential state=present
+    apt: name=git state=present
+    apt: name=libtiff4-dev state=present
+    apt: name=libjpeg8-dev state=present
+    apt: name=zlib1g-dev state=present
+    apt: name=libfreetype6-dev state=present
+    apt: name=liblcms1-dev state=present
+    apt: name=libwebp-dev state=present
+  - name: Clonando repositorio desde git
+    git: repo=https://github.com/jesmorc/Workinout.git dest=Workinout version=HEAD force=yes
+  - name: Dando permisos a la carpeta
+    command: chmod -R +x Workinout
+  - name: Instalando herramientas para hacer make
+    command: sudo apt-get install make g++ gcc libssl-dev -y
+  - name: Voy a cambiar de directorio y a hacer make install
+    shell: cd Workinout && make install
+    register: debuggearEtapaMakeInstall
+  - debug: msg="{{ debuggearEtapaMakeInstall.stdout }}"
+  - debug: msg="{{ debuggearEtapaMakeInstall.stderr }}"
+  - name: Voy a ejecutar la aplicacion
+    shell: cd Workinout && make run
+    register: debuggearEtapaMakeRun
+  - debug: msg="{{ debuggearEtapaMakeRun.stdout }}"
+  - debug: msg="{{ debuggearEtapaMakeRun.stderr }}"
+    
