@@ -2,7 +2,7 @@
 
 El despliegue se ha realizado en el *IaaS* **Azure**.
 
-[![Azure](http://azuredeploy.net/deploybutton.png)](http://iv-jesmorc-ubuntuserver-service-euemq.cloudapp.net/Workinout/
+[![Azure](http://azuredeploy.net/deploybutton.png)](http://iv-jesmorc-ubuntuserver-service-euemq.cloudapp.net/Workinout/)
 
 Instalamos las dependencias necesarias:
 ```
