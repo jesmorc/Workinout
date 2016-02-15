@@ -42,7 +42,6 @@ openssl req -x509 -key ~/.ssh/id_rsa -nodes -days 365 -newkey rsa:2048 -out azur
 cat azurevagrant.key > azurevagrant.pem
 ```
 
-![subir certificado a azure]()
 
 Instalamos Virtualbox con:
 
@@ -50,27 +49,25 @@ Instalamos Virtualbox con:
 sudo apt-get install virtualbox virtualbox-dkms
 ```
 
-Una vez hecho esto creamos el playbook de ansible [playbookej8.yml](https://github.com/AntonioPozo/Bares/blob/master/playbookej8.yml) que va a servir para todo lo relativo al aprovisionamiento de la aplicación:
+Una vez hecho esto creamos el playbook de ansible [playbookansible.yml](https://github.com/jesmorc/Workinout/blob/master/playbookansible.yml) que va a servir para todo lo relativo al aprovisionamiento de la aplicación:
 
 - Actualizar el sistema
 - Instalar herramientas necesarias
 - Clonar el repositorio de Git
 - Dar permisos necesarios
-- **Ejecutar la aplicación**
+- Ejecutar la aplicación
 
 Es necesario que el nombre del host sea ```localhost``` ya que el playbook se ejecutará en la máquina remota, que será la que proporcione el servicio. Como la máquina se ha creado con Vagrant, usaremos el usuario ```vagrant``` por defecto. 
 
-Ahora creamos el [Vagrantfile]() que creará la máquina virtual en Azure. El último bloque del archivo hace uso del playbook de ansible.
+Ahora creamos el [Vagrantfile](https://github.com/jesmorc/Workinout/blob/master/Vagrantfile) que creará la máquina virtual en Azure. El último bloque del archivo hace uso del playbook de ansible.
 
-Añadimos las líneas de abajo en el archivo ~/ansible_hosts
+Añadimos las líneas de abajo en el archivo ~/ansible_hosts y en ```/etc/ansible/hosts```
 
 ```
 [localhost]
 192.168.56.10
 ansible_connection=local
 ```
-
-Para curarme en salud, he añadido también el mísmo código en el archivo ```/etc/ansible/hosts``` ya que alguna vez he tenido problemas con ello.
 
 Exportamos la variable de entorno de Ansible para que se reconozca el host:
 
