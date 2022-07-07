@@ -8,7 +8,7 @@ Jinja2==2.8
 MarkupSafe==0.23
 Pillow==2.9.0
 request==0.0.2
-requests==2.2.1
+requests==2.20.0
 six==1.5.2
 ssh-import-id==3.21
 urllib3==1.7.1
